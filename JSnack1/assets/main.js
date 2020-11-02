@@ -36,8 +36,22 @@ var bikes =[
     }
 ];
 
-for (var i = 0; i < bikes.length; i++) {
+// Soluzione utilizzando forEach e Math.min
+console.log("--------------- Soluzione utilizzando forEach e Math.min ---------------");
+var pesi = [];
 
+bikes.forEach(function(bici) {
+    pesi.push(bici.peso)
+});
+console.log(pesi);
+
+var peso_min = Math.min.apply(null, pesi );
+console.log("Peso minimo = " + peso_min);
+
+
+// Solzuione ciclando array
+console.log("--------------- Solzuione ciclando array ---------------");
+for (var i = 0; i < bikes.length; i++) {
     var index = 0 ;
 
     for(var bike_attr in bikes[i]){
@@ -66,5 +80,7 @@ for (var i = 0; i < bikes.length; i++) {
 
     }
 }
+
+
 
 console.log("La bici più leggera è " + bikes[index].nome + " che pesa " + bikes[index].peso + " Kg");

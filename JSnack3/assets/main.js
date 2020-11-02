@@ -34,10 +34,13 @@ var min_ascii = 97;
 var max_ascii = 122;
 
 for (var i = 0; i < objects.length; i++) {
-    // genero la stringa con una lettera casuale estratta corrispondente ad un numero del codice ascii
+    // genero la stringa con una lettera minuscola casuale estratta corrispondente ad un numero del codice ascii
     var random_letter = String.fromCharCode(getRndInteger(min_ascii, max_ascii));
     console.log(random_letter);
+
+    // Aggiungo l'oggetto al nuovo array
     new_obj.push(objects[i]);
+    // E aggiungo la nuova proprietà
     new_obj[i].position = random_letter;
 }
 

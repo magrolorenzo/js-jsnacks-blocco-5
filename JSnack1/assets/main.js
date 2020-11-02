@@ -48,18 +48,18 @@ for (var i = 0; i < bikes.length; i++) {
             console.log(bike_attr + " = " + bikes[i][bike_attr]);
             // Se è la prima bici del array mi salvo il peso e l'indice
             if(i == 0){
-
                 var min_wheight = bikes[i][bike_attr];
                 index = i;
-                console.log("min wheight " + min_wheight);
+                console.log("Nuovo min wheight " + min_wheight);
 
             } else {
             // Controllo se il peso della bici attuale è minore di quello attualmente salvato come minore
             // Se pesa di meno mi salvo l'indice della bici e il peso come valore di confronto
-                console.log("min wheight " + min_wheight);
+                console.log("min wheight attuale = " + min_wheight);
                 if (bikes[i][bike_attr] < min_wheight){
                     min_wheight = bikes[i][bike_attr];
                     index = i;
+                    console.log("Nuovo min wheight " + min_wheight);
                 }
             }
         }
